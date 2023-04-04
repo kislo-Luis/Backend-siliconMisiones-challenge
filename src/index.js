@@ -5,7 +5,7 @@ import { sequelize } from "./database/database.js";
 
 async function main() {
   try {
-    await sequelize.sync({ force: true });
+    await sequelize.authenticate();
     app.listen(process.env.PORT);
     console.log("server run on port " + process.env.PORT);
   } catch (error) {
