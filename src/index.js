@@ -3,6 +3,10 @@ dotenv.config();
 import app from "./app.js";
 import { sequelize } from "./database/database.js";
 
+import "./models/alumno.js";
+import "./models/curso.js";
+import "./models/usuario.js";
+
 async function main() {
   try {
     await sequelize.sync({ force: true });
