@@ -3,18 +3,13 @@ dotenv.config();
 import app from "./app.js";
 import { sequelize } from "./database/database.js";
 
-import "./models/alumno.js";
-import "./models/curso.js";
-import "./models/usuario.js";
-
 async function main() {
   try {
-    await sequelize.sync({ force: true });
+    await sequelize.sync({ force: false });
     app.listen(process.env.PORT);
     console.log("server run on port " + process.env.PORT);
   } catch (error) {
     console.error("Unable to connect to the database:", error);
   }
 }
-
 main();

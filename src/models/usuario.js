@@ -28,7 +28,7 @@ export const Usuario = sequelize.define(
     },
   },
 
-  { timestamps: true }
+   { timestamps: false },
 );
 
 Usuario.hasMany(Alumno, {
@@ -40,3 +40,5 @@ Alumno.belongsTo(Usuario, {
   foreignKey: "id_usuario",
   targetId: "id",
 });
+
+
