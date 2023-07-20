@@ -27,7 +27,7 @@ export const Curso = sequelize.define(
     },
 
     activo: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.STRING,
     },
   },
   { timestamps: false }

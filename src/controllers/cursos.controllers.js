@@ -31,6 +31,7 @@ export const createCurso = async (req, res) => {
       anio,
       activo,
     });
+    console.log(req.body)
     res.json(newCurso);
   } catch (error) {
     return res.status(500).json({ message: error.message });
